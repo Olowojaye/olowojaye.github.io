@@ -1,0 +1,243 @@
+
+
+:root {
+    --dark-navy: #020c1b;
+    --navy: #0a192f;
+    --light-navy: #112240;
+    --lightest-navy: #233554;
+    --navy-shadow: rgba(2,12,27,0.7);
+    --dark-slate: #495670;
+    --slate: #8892b0;
+    --light-slate: #a8b2d1;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+    --green: #64ffda;
+    --green-tint: rgba(100,255,218,0.1);
+    --pink: #f57dff;
+    --blue: #57cbff;
+    --font-sans: "Calibre","Inter","San Francisco","SF Pro Text",-apple-system,system-ui,sans-serif;
+    --font-mono: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace;
+    --fz-xxs: 12px;
+    --fz-xs: 13px;
+    --fz-sm: 14px;
+    --fz-md: 16px;
+    --fz-lg: 18px;
+    --fz-xl: 20px;
+    --fz-xxl: 22px;
+    --fz-heading: 32px;
+    --border-radius: 4px;
+    --nav-height: 100px;
+    --nav-scroll-height: 70px;
+    --tab-height: 42px;
+    --tab-width: 120px;
+    --easing: cubic-bezier(0.645,0.045,0.355,1);
+    --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+    --hamburger-width: 30px;
+    --ham-before: top 0.1s ease-in 0.25s,opacity 0.1s ease-in;
+    --ham-before-active: top 0.1s ease-out,opacity 0.1s ease-out 0.12s;
+    --ham-after: bottom 0.1s ease-in 0.25s,transform 0.22s cubic-bezier(0.55,0.055,0.675,0.19);
+    --ham-after-active: bottom 0.1s ease-out,transform 0.22s cubic-bezier(0.215,0.61,0.355,1) 0.12s;
+}
+
+
+body {
+	margin: 0px;
+    width: 100%;
+    min-height: 100%;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--navy);
+    color: var(--slate);
+    font-family: var(--font-sans);
+    font-size: var(--fz-xl);
+    line-height: 1.3;
+}
+
+
+.navbar-brand {
+	margin-right: 100px;
+}
+
+
+p {
+    text-align: center;
+    margin: auto 10% auto 10%;
+}
+
+.navbar-expand-lg .nav-link {
+    color: var(--green);
+    background-color: transparent;
+    border: 1px solid var(--green);
+    border-radius: var(--border-radius);
+    padding: 0.75rem 1rem;
+    font-family: var(--font-mono);
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-right: 30px;
+    font-size: var(--fz-xs);
+}
+
+#home {
+	display: flex;
+	flex-wrap: wrap;
+	background-image: url('image.png');
+	background-repeat: no-repeat;
+	background-size: 105%;
+	background-position: auto;
+	height: 100vh;
+	min-height: 500px;
+	position: relative;
+}
+
+#home .max-width{
+	margin: auto 40px auto 90px;
+}
+
+#home .home-content .text-1 {
+	color: var(--green);
+    font-family: var(--font-mono);
+    font-size: 20px;
+    font-weight: 400;
+}
+
+#home .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+    color: var(--lightest-slate);
+    line-height: 1.1;
+}
+
+#home .home-content .text-3{
+    font-size: 30px;
+    margin: 5px 0;
+}
+
+::selection {
+    background-color: var(--lightest-navy);
+    color: var(--lightest-slate);
+}
+
+.social-icons {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin-left: 5px;
+	position: fixed;
+	left: 10px;
+	top: 150px;
+  }
+
+.social-icons .logo {
+	margin: 15px;
+	color: var(--green);
+  transition: var(--transition);
+}
+
+.page-section {
+	display: flex;
+	flex-wrap: wrap;
+	height: 100vh;
+	min-height: 500px;
+  position: relative;
+}
+
+.page-section .page-div {
+	margin: 115px auto auto auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Style inputs, select elements and textareas */
+input[type=text], input[type=email], textarea{
+  width: 100%;
+  padding: 12px;
+  border: 1.5px solid;
+  border-color: var(--green);
+  border-radius: 10px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+  padding: 12px 0 12px 0;
+  display: inline-block;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  float: right;
+}
+
+/* Style the container */
+.form-container {
+  background-color: transparent;
+  padding: 20px;
+  width: 100vh;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.section-header {
+  color: var(--lightest-slate);
+  font-size: 2em;
+  font-family: fantasy;
+  text-align: center;
+  border-bottom: 2px solid;
+  width: 350px;
+  border-right: 2px solid;
+  border-color: var(--green);
+}
+
+#skills {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: auto 10%;
+}
+
+#web, #data {
+  border: 1px solid var(--green);
+  padding: 10px;
+  margin: 5px;
+}
+
+.skills {
+  font-size: 15px;
+  margin-top: 5px;
+}
