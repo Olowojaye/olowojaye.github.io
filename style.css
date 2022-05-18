@@ -1,4 +1,10 @@
-
+body {
+	margin: 1%;
+	background-color: var(--navy);
+/*	background-image: url("image.png");*/
+	background-size: 100vw;
+	background-repeat: no-repeat;
+}
 
 :root {
     --dark-navy: #020c1b;
@@ -39,205 +45,324 @@
     --ham-after-active: bottom 0.1s ease-out,transform 0.22s cubic-bezier(0.215,0.61,0.355,1) 0.12s;
 }
 
+nav {
+	margin-top: 2vh;
+	position: sticky;
+	position: -webkit-sticky;
+	top: 1vh;
+	padding: 2vh;
+}
 
-body {
-	margin: 0px;
-    width: 100%;
-    min-height: 100%;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    background-color: var(--navy);
-    color: var(--slate);
-    font-family: var(--font-sans);
-    font-size: var(--fz-xl);
-    line-height: 1.3;
+#logo {
+	width: 6.5vw;
+	float: left;
+}
+
+.nav-right {
+	display: block;
+	float: right;
+}
+
+#nav-list {
+	list-style-type: none;
+	margin-top: 0;
+	display: none;
+	background-color: var(--navy);
+	padding: 2vw;
 }
 
 
-.navbar-brand {
-	margin-right: 100px;
+.nav-link {
+	text-decoration: none;
+	color: white;
+	font-family: var(--font-mono);
 }
 
-
-p {
-    text-align: center;
-    margin: auto 10% auto 10%;
-}
-
-.navbar-expand-lg .nav-link {
-    color: var(--green);
-    background-color: transparent;
-    border: 1px solid var(--green);
-    border-radius: var(--border-radius);
-    padding: 0.75rem 1rem;
-    font-family: var(--font-mono);
-    line-height: 1;
-    text-decoration: none;
-    cursor: pointer;
-    transition: var(--transition);
-    margin-right: 30px;
-    font-size: var(--fz-xs);
-}
-
-#home {
-	display: flex;
-	flex-wrap: wrap;
-	background-image: url('image.png');
-	background-repeat: no-repeat;
-	background-size: 105%;
-	background-position: auto;
-	height: 100vh;
-	min-height: 500px;
-	position: relative;
-}
-
-#home .max-width{
-	margin: auto 40px auto 90px;
-}
-
-#home .home-content .text-1 {
+.nav-link:hover {
 	color: var(--green);
-    font-family: var(--font-mono);
-    font-size: 20px;
-    font-weight: 400;
 }
 
-#home .home-content .text-2 {
-    font-size: 75px;
-    font-weight: 600;
-    margin-left: -3px;
-    color: var(--lightest-slate);
-    line-height: 1.1;
+.nav-li {
+	padding: 3vh;
+	margin: 0 1vw;
 }
 
-#home .home-content .text-3{
-    font-size: 30px;
-    margin: 5px 0;
+.nav-name {
+	margin-left: 1vw;
 }
 
-::selection {
-    background-color: var(--lightest-navy);
-    color: var(--lightest-slate);
+.active {
+	color: var(--blue);
 }
 
-.social-icons {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	margin-left: 5px;
+.checkbtn {
+	color: white;
+	font-size: xx-large;
+	font-weight: 2300px;
+	cursor: pointer;
+	display: block;
+	margin-right: 2vw;
+	float: right;
+}
+
+
+#check {
+	display: none;
+}
+
+.after {
+	font-family: var(--font-sans);
+	font-size: medium;
+	font-weight: 2300px;
+	transform: scale(1.5, 1);
+	margin-top: 10px;
+	display: none;
+}
+
+#check:checked ~ #nav-list {
+	display: block;
+}
+
+
+#check:checked ~ .after {
+	display: block;
+}
+
+#check:checked ~ .before {
+	display: none;
+}
+
+#social-icons {
+	text-decoration: none;
+	float: left;
+	min-height: 60vh;
+	margin-top: 25vh;
 	position: fixed;
-	left: 10px;
-	top: 150px;
-  }
+	margin-left: 2.5vw;
+}
 
-.social-icons .logo {
-	margin: 15px;
+.social-link {
+	display: block;
+	margin-top: 2vh;
+}
+
+.social {
+	color: white;
+	transform: scale(1.35);
+	margin-top: 2vh;
+}
+
+.social:hover {
+	transform: scale(2);
 	color: var(--green);
-  transition: var(--transition);
 }
 
-.page-section {
-	display: flex;
-	flex-wrap: wrap;
-	height: 100vh;
-	min-height: 500px;
-  position: relative;
+
+.page {
+	min-height: 100vh;
+	margin: auto;
+	clear: both;
 }
 
-.page-section .page-div {
-	margin: 115px auto auto auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.page-header {
+  color: white;
+  font-size: clamp(26px, 5vw, var(--fz-heading)); /*This sets the middle number as preferred, and the left and right ones as the minimum and maximum respectively.*/
+  font-family: var(--font-sans);
+  text-align: center;
+  padding-top: 3vh;
+  display: block;
 }
 
-/* Style inputs, select elements and textareas */
-input[type=text], input[type=email], textarea{
-  width: 100%;
-  padding: 12px;
-  border: 1.5px solid;
-  border-color: var(--green);
-  border-radius: 10px;
-  box-sizing: border-box;
-  resize: vertical;
-}
-
-/* Style the label to display next to the inputs */
-label {
-  padding: 12px 0 12px 0;
-  display: inline-block;
-}
-
-/* Style the submit button */
-input[type=submit] {
-  background-color: white;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  float: right;
-}
-
-/* Style the container */
-.form-container {
-  background-color: transparent;
-  padding: 20px;
-  width: 100vh;
-}
-
-/* Floating column for labels: 25% width */
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-}
-
-/* Floating column for inputs: 75% width */
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
+#greeting {
+	color: var(--lightest-slate);
+  font-family: var(--font-mono);
+  font-size: clamp(var(--fz-sm),5vw,var(--fz-md));
+  font-weight: 400;
+  text-align: left;
   clear: both;
 }
 
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
+#roles {
+	color: var(--green);
+  font-family: var(--font-mono);
+  font-size: clamp(var(--fz-sm),5vw,var(--fz-md));
+  font-weight: 400;
+  text-align: left;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+
 }
 
-.section-header {
-  color: var(--lightest-slate);
-  font-size: 2em;
-  font-family: fantasy;
-  text-align: center;
-  border-bottom: 2px solid;
-  width: 350px;
-  border-right: 2px solid;
-  border-color: var(--green);
+#name {
+	color: white;
+	font-family: var(--font-sans);
+  font-size: clamp(40px, 8vw, 80px);
+  font-weight: 600;
+  line-height: 1.1;
+  text-align: left;
 }
 
-#skills {
-  display: grid;
-  grid-template-columns: auto auto;
-  margin: auto 10%;
+#intro {
+		color: var(--slate);
+	  font-family: var(--font-sans);
+	  font-size: var(--fz-xl);
+	  line-height: 1.3;
+	  text-align: left;
 }
 
-#web, #data {
-  border: 1px solid var(--green);
-  padding: 10px;
-  margin: 5px;
+.page-container {
+		width: 80vw;
+		margin-left: auto;
 }
 
-.skills {
-  font-size: 15px;
-  margin-top: 5px;
+#home-text, .sub-section {
+		display: inline-block;
+		width: 60vw;
+		margin-top: 5vh;
+		float: left;
+}
+
+
+#dp {
+		display: inline-block;
+		/*	border-bottom: 9px solid #0fb;
+	  border-right: 9px solid #0fb;*/
+	  width: 60vw;
+}
+
+.sub-heading {
+		color: var(--lightest-slate);
+		font-family: var(--font-sans);
+	  font-size: clamp(15px, 3vw, 30px);
+	  line-height: 1.1;
+	  text-align: left;
+	  margin: auto;
+}
+
+.content {
+		color: var(--slate);
+	  font-family: var(--font-sans);
+	  font-size: var(--fz-xl);
+	  line-height: 1.3;
+	  text-align: left;
+	  margin: auto;
+}
+
+
+#cv {
+		position: relative;
+		clear: both;
+		display: block;
+		margin-bottom: 10vh;
+}
+
+.cv {
+		background-color: var(--pink);
+		padding: 10px;
+		border-radius: 20px;
+		text-align: center;
+		width: 120px;
+		font-family: var(--font-sans);
+		color: white;
+		text-decoration: none;
+		position: absolute;
+		top: 15px;
+		left: 30vw;
+}
+
+
+.cv:hover {
+		transform: scale(1.1);
+}
+
+#form-container {
+	display: table;
+	margin: 0 auto;
+	clear: both;
+}
+
+.form {
+	display: block;
+	border-radius: 10px;
+	background-color: var(--navy);
+	width: 70vw;
+	margin-top: 3vh;
+	border: 2px solid white;
+	color: var(--lightest-slate);
+}
+
+#file {
+	display: inline;
+	width: 30vw;
+}
+
+.submit {
+	width: 20vw;
+	height: 4vh;
+	cursor: pointer;
+}
+
+.name, .email {
+	height: 4vh;
+
+}
+
+::placeholder {
+	color: var(--lightest-slate);
+}
+
+.message {
+	height: 20vh;
+}
+
+
+
+
+
+/*For tabs and pcs*/
+@media screen and (min-width: 768px) {
+
+.nav-link {
+	margin-left: 3vw;
+	margin-top: auto;
+}
+
+#nav-list {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: transparent;
+}
+
+.nav-li {
+	padding: 0;
+}
+
+.checkbtn {
+	display: none;
+}
+
+.page-header {
+	padding-top: 9vh;
+}
+
+
+.page-container {
+	width: 85vw;
+}
+
+
+#home-text {
+	width: 40vw;
+	margin-top: 30vh;
+}
+
+.sub-section {
+	width: 40vw;
+}
+
+
+#dp {
+	width: 40vw;
+}
+
 }

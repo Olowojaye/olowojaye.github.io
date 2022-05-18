@@ -1,215 +1,150 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!-- Specify character set to be used on page -->
-  <meta charset="utf-8"> 
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Specify how different devices would render page -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Specifies keywords for easy location with search engines -->
+  	<meta name="keywords" content="Jaye, Olowojaye, Sir Rufus, Max, Engineering Tutorials"> 
 
-  <!-- Specify keywords for easy location with search engines -->
-  <meta name="keywords" content="Jaye, Olowojaye, Sir Rufus, Max, Engineering Tutorials"> 
+  	<!-- Links CSS style file to be used for the icons-->
+  	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"> 
 
-  <!-- To use BootStrap CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
+  	<!-- Links CSS style file to be used for the page-->
+  	<link rel="stylesheet" href="style.css">
 
-  <!-- Links CSS style file to be used for the page-->
-  <link rel="stylesheet" href="style.css"> 
+  	<!-- Specifies logo beside page title -->
+  	<link rel = "icon" href = "logo.svg" type = "image/x-icon"> 
 
-  <!-- Specify page developer -->
-  <meta name="author" content="Olowojaye Rufus"> 
-
-  <!-- Specifies page title -->
-  <title>Olowojaye Rufus</title>
-
-  <!-- Specifies logo beside page title -->
-  <link rel = "icon" href = "logo.svg" type = "image/x-icon"> 
+	<title>Olowojaye Rufus</title>
 </head>
 <body>
-  <nav id="navigation" class="navbar fixed-top navbar-expand-lg navbar-dark">
-    <div class="container-fluid">
-      <img class="navbar-brand" src="logo.svg" alt="logo" width="100px" height="100px"></img>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ol class="navbar-nav mr-auto">
-          <li class="nav-item">
-            <a class="nav-link active" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#experience">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Resume_Olowojaye_Rufus.pdf" target="_blank">Resume</a>
-          </li>          
-        </ol>
-      </div>
-    </div>
-  </nav>
+	<!-- For logo and navigation bar -->
+	
+	<nav id="navigation">
+		<img id="logo" src="logo.svg" alt="Jaye">
+		<div class="nav-right">
+			<input type="checkbox" id="check">
+			<label for="check" class="checkbtn before">=</label>
+			<label for="check" class="checkbtn after">X</label>
+			<ul id="nav-list">
+				<li class="nav-li">
+					<a class="nav-link home active" href="#home"><i class="las la-home"></i><span class="nav-name">Home</span></a>
+				</li>
+				<li class="nav-li">
+					<a class="nav-link about" href="#about"><i class="las la-user"></i><span class="nav-name">About</span></a>
+				</li>
+				<li class="nav-li">
+					<a class="nav-link projects" href="#projects"><i class="las la-project-diagram"></i><span class="nav-name">Projects</span></a>
+				</li>
+				<li class="nav-li">
+					<a class="nav-link experience" href="#experience"><i class="las la-briefcase"></i><span class="nav-name">Experience</span></a>
+				</li>
+				<li class="nav-li">
+					<a class="nav-link contact" href="#contact"><i class="las la-envelope"></i><span class="nav-name">Contact</span></a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 
 
+	<!-- For side bar menu -->
+	<div id="social-icons">
+		<a title="GitHub" href="https://github.com/olowojaye" target="_blank" class="social-link"><i class="lab la-github social"></i></a>
+		<a title="DataCamp" href="https://https://www.datacamp.com/profile/rufusolowojaye" target="_blank" class="social-link"><i class="las la-laptop-code social"></i></a>
+		<a title="LinkedIn" href="https://www.linkedin.com/in/olowojaye-rufus-48213735/" target="_blank" class="social-link"><i class="lab la-linkedin social"></i></a>
+		<a title="Kaggle" href="https://www.kaggle.com/sirrufusmax" target="_blank" class="social-link"><i class="lab la-kaggle  social"></i></a>
+		<a title="YouTube" href="https://www.youtube.com/c/MaxAcademy1" target="_blank" class="social-link"><i class="lab la-youtube social"></i></a>
+		<a title="HackerRank" href="https://www.hackerrank.com/rufusolowojaye?hr_r=1" target="_blank" class="social-link"><i class="lab la-hackerrank  social"></i></a>
+		<a title="Twiter" href="https://twitter.com/Sir_Rufus_Max" target="_blank" class="social-link"><i class="lab la-twitter social"></i></a>
+	</div>
 
-  <!-- Home section -->
-  <section  id="home" class="page-section">
-    <div class="max-width">
-      <div class="home-content">
-        <div class="text-1">Hi, I am</div>
-        <div class="text-2">Olowojaye Rufus.</div>
-        <div class="text-3">I develop algorithms and softwares <br> that help individuals and businesses <br> make data-driven decisions.</div>
-      </div>
-    </div>
+	<!-- For Home page -->
+	<section id="home" class="page">
+		<div class="page-container">
+			<div id="home-text">
+				<div id="greeting">Hi, I am</div>
+				<div id="name">Olowojaye Rufus</div>
+				<div id="roles">(Front-end Developer and Data Scientist)</div>
+				<div id="intro">I develop algorithms and softwares that help individuals and businesses make data-driven decisions.</div>
+			</div>
+			<img src="image.png" id="dp">			
+		</div>
+	</section>
 
-    <div class="social-icons">
-      <a class="logo" href="https://github.com/olowojaye" target="_blank">
-        <span title="GitHub">
-          <ion-icon name="logo-github" style="pointer-events:none"></ion-icon>
-        </span>
-      </a>
-      <a class="logo" href="https://www.datacamp.com/profile/rufusolowojaye" target="_blank">
-        <span title="DataCamp">
-          <ion-icon name="code-outline" style="pointer-events:none"></ion-icon>
-        </span>
-      </a>
-      <a class="logo" href="https://www.linkedin.com/in/olowojaye-rufus-48213735/" target="_blank">
-        <span title="LinkedIn">
-          <ion-icon name="logo-linkedin" style="pointer-events:none"></ion-icon>
-        </span>
-      </a>
-      <a class="logo" href="https://www.kaggle.com/sirrufusmax" target="_blank">
-        <span title="Kaggle">
-          <ion-icon name="code-outline" style="pointer-events:none"></ion-icon>
-        </span>
-      </a>
-      <a class="logo" href="https://www.youtube.com/c/MaxAcademy1/?sub_confirmation=1" target="_blank">
-        <span title="YouTube">
-          <ion-icon name="logo-youtube" style="pointer-events:none"></ion-icon>
-        </span>
-      </a>
-      <a class="logo" href="https://www.hackerrank.com/rufusolowojaye?hr_r=1" target="_blank">
-        <span title="HackerRank">
-          <ion-icon name="code-outline" style="pointer-events:none"></ion-icon>
-        </span>
-      </a>
-      <a class="logo" href="https://twitter.com/Sir_Rufus_Max" target="_blank">
-        <span title="Twitter">
-          <ion-icon name="logo-twitter" style="pointer-events:none"></ion-icon>
-        </span>
-      </a>
-    </div>
-  </section>
+	<!-- For About page -->
+	<section id="about" class="page">
+		<div class="page-container">
+			<h1 class="page-header">About Me</h1>
+			<p class="content">I am an academic, data scientist and web developer with interests in web applications, artificial intelligence, and robotics.</p>
+		    <p class="content">I am proficient in the following packages, and always look forward to learning new and exciting ones.</p>
+		    <div id="skills">
+				<div class="sub-section">
+					<h2 class="sub-heading">Web Development</h2>
+					<p class="content">Front End: HTML5, CSS3, JavaScript, React <br>Back End (In view): NodeJS, Express.js <br> Others (In view): Flask, Django</p>
+				</div>
+				<div class="sub-section">
+					<h2 class="sub-heading">Data Science</h2>
+					<p class="content">Python: Scikit-learn, XGBoost <br> SQL: MySQL, PostgreSQL, MS SQL Server <br>In view: PyTorch, TensorFlow</p>
+				</div>
+			</div>
+			<div id="cv"><a class="cv" href="Resume_Olowojaye_Rufus.pdf" target="_blank">View my resume</a>
+			</div>
+		</div>
+	</section>
 
+	<!-- For Projects page -->
+	<section id="projects" class="page">
+		<div class="page-container">
+			<h1 class="page-header">My Projects</h1>
+			<p class="content">This website is my first web development project. It involves the use of CSS, HTML, JavaScript, and Canva for logo design and picture editing. Subsequent projects will be posted when completed.<br>
+    		My data science projects can be accessed on the GitHub and DataCamp links to the left. <br></p>			
+			<div class="sub-section">
+				<p class="content"></p>
+			</div>
+			<div class="sub-section">
+				<p class="content"></p>
+			</div>
+		</div>
+	</section>
 
+	<!-- For Experience page -->
+	<section id="experience" class="page">
+		<div class="page-container">
+			<h1 class="page-header">My Work Experience</h1>
+			<p class="content">To be updated.</p>
+			<div class="sub-section">
+				<p class="content"></p>
+			</div>
+			<div class="sub-section">
+				<p class="content"></p>
+			</div>
+		</div>
+	</section>
 
-  <!-- About section -->
-  <section id="about" class="page-section">
-    <div class="page-div">
-      <h1 class="section-header">About Me</h1>
-      <p>I am an academic, data scientist and web developer passionate about artificial intelligence, robotics and web applications.</p>
-      <p>I am proficient in the following tools and packages, and always look forward to learning new, exciting and challenging ones.</p>
-      <section id="skills">
-        <div id="data">
-          <img class="stack" src="data.png">
-          <h5 class="skills">Python: Scikit-learn, XGBoost <br> SQL: MySQL, PostgreSQL, MS SQL Server <br>In view: PyTorch, TensorFlow
-          </h5>
-        </div>
-        <div id="web">
-          <img class="stack" src="web.png">
-          <h5 class="skills">Front End: HTML5, CSS, JavaScript, React <br>Back End: Express.js <br> In view: Flask, Django
-          </h5>
-        </div>
-      </section>
-    
+	<!-- For Contact page -->
+	<section id="contact" class="page">
+		<div class="page-container">
+			<h1 class="page-header">Contact Me</h1>
+			<p class="content">Thank you for visiting my website. I could work with you on your next project. Kindly leave a message for me right away.</p>
+			<div>
+			<div id="form-container">
+		        <form id="form" action="https://formsubmit.co/e3b4c98e132ca4dda20c9377e5d0b241" method="POST" enctype="multipart/form-data">
+		        	<input style="font-size:16px;" type="text" name="name" id="name" class="form name" placeholder="Full Name" required>
+		            <input type="email" name="email" id="email" class="form email" placeholder="Email" required>
+		            <textarea name="message" id="message" class="form message" placeholder="Message" required></textarea>
+		            <label class="content" for="file">Attach file (optional): </label>
+	            	<input type="file" id="file" name="file" class="form upload">
+	            	<input type="submit" value="Send" class="form submit">
+		        </form>
+		    </div>
+		    </div>
+			
+		</div>
+	</section>
 
-
-    </div>
-  </section>
-
-
-
-  <!-- Projects section -->
-  <section id="projects" class="page-section">
-    <div class="page-div">
-      <h1 class="section-header">My Projects</h1>
-      <p>This website is my first web development project. It involves the use of CSS, HTML, JavaScript, BootStrap, and Canva for logo design and picture editing. Subsequent projects will be posted when completed.<br>
-        My data science projects can be accessed on the GitHub and DataCamp links to the left. <br>
-      </p>
-    
-    
-
-
-    </div>
-  </section>
-
-
-
-    <!-- Experience section -->
-  <section id="experience" class="page-section">
-    <div class="page-div">
-      <h1 class="section-header">My Work Experience</h1>
-      <p>To be updated.<br>
-    
-
-
-    </div>
-  </section>
-
-
-
-  <!-- Contact section -->
-  <section id="contact" class="page-section">
-    <div class="page-div">
-      <h1 class="section-header">Contact Me</h1>
-      <p>Thank you for visiting my website. I could work with you on your next project. Kindly leave a message for me right away.</p>
-      <div class="form-container">
-        <form action="https://formsubmit.co/e3b4c98e132ca4dda20c9377e5d0b241" method="POST">
-          <div class="row">
-            <div class="col-25">
-              <label for="name">Name</label>
-            </div>
-            <div class="col-75">
-              <input type="text" id="name" name="name" placeholder="Your name..." required>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-25">
-              <label for="email">Email Address</label>
-            </div>
-            <div class="col-75">
-              <input type="email" id="email" name="email" placeholder="Your email address..." required>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-25">
-              <label for="message">Message</label>
-            </div>
-            <div class="col-75">
-              <textarea id="subject" name="subject" placeholder="Write your message..." style="height:200px" required></textarea>
-            </div>
-          </div>
-          <div class="row">
-            <input type="submit" value="Send">
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script type="text/javascript" src="script.js"></script>
+	<!-- Link JS for active navigation -->
+	<script type="text/javascript" src="script.js"></script>
 </body>
 </html>

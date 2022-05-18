@@ -1,35 +1,26 @@
-/* Code for changing active 
-link on clicking */
-var btns = 
-    $("#navigation .navbar-nav .nav-link");
 
-for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click",
-                          function () {
-        var current = document
-            .getElementsByClassName("active");
+/* Code for changing active link on scrolling or clicking */
+var sections = document.querySelectorAll('section');
+var links = document.querySelectorAll('.nav-link');
+let scrHeight = screen.height;
 
-        current[0].className = current[0]
-            .className.replace(" active", "");
-
-        this.className += " active";
-    });
-}
-
-/* Code for changing active 
-link on Scrolling */
-$(window).scroll(function () {
-    var distance = $(window).scrollTop();
-    $('.page-section').each(function (i) {
-
-        if ($(this).position().top 
-            <= distance + 250) {
-              
-                $('.navbar-nav a.active')
-                    .removeClass('active');
-
-                $('.navbar-nav a').eq(i)
-                    .addClass('active');
+window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop; //distance of section from parent
+        //const sectionHeight = section.clientHeight //height of section within view
+        const pageOffset = pageYOffset; //distance of current location from top end of page
+        if (pageOffset + scrHeight/3 >= sectionTop) {
+            current = section.getAttribute('id');
         }
-    });
-}).scroll();
+    })
+
+links.forEach(link => {
+    link.classList.remove('active');
+    if (link.classList.contains(current)) {
+        link.classList.add('active')
+    }
+})
+
+})
+
