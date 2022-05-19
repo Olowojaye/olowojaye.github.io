@@ -1,9 +1,6 @@
 body {
 	margin: 1%;
 	background-color: var(--navy);
-/*	background-image: url("image.png");*/
-	background-size: 100vw;
-	background-repeat: no-repeat;
 }
 
 :root {
@@ -160,7 +157,6 @@ nav {
 
 .page {
 	min-height: 100vh;
-	margin: auto;
 	clear: both;
 }
 
@@ -190,7 +186,6 @@ nav {
   text-align: left;
   margin-top: 2vh;
   margin-bottom: 2vh;
-
 }
 
 #name {
@@ -211,13 +206,16 @@ nav {
 }
 
 .page-container {
-		width: 80vw;
-		margin-left: auto;
+		width: 82vw;
+		float: right;
+		margin-right: 5vw;
 }
+
+
 
 #home-text, .sub-section {
 		display: inline-block;
-		width: 60vw;
+		width: 70vw;
 		margin-top: 5vh;
 		float: left;
 }
@@ -227,7 +225,7 @@ nav {
 		display: inline-block;
 		/*	border-bottom: 9px solid #0fb;
 	  border-right: 9px solid #0fb;*/
-	  width: 60vw;
+	  width: 70vw;
 }
 
 .sub-heading {
@@ -267,7 +265,7 @@ nav {
 		text-decoration: none;
 		position: absolute;
 		top: 15px;
-		left: 30vw;
+		left: 25vw;
 }
 
 
@@ -276,9 +274,8 @@ nav {
 }
 
 #form-container {
-	display: table;
-	margin: 0 auto;
-	clear: both;
+	display: flex;
+	justify-content: center;
 }
 
 .form {
@@ -346,11 +343,6 @@ nav {
 }
 
 
-.page-container {
-	width: 85vw;
-}
-
-
 #home-text {
 	width: 40vw;
 	margin-top: 30vh;
@@ -363,6 +355,10 @@ nav {
 
 #dp {
 	width: 40vw;
+}
+
+.cv {
+	left: 35vw;
 }
 
 }
