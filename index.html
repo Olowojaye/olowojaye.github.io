@@ -1,150 +1,183 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Olowojaye Rufus' web development and data science projects portfolio">
+    <title>Olowojaye Rufus</title>
 
-	<!-- Specifies keywords for easy location with search engines -->
-  	<meta name="keywords" content="Jaye, Olowojaye, Sir Rufus, Max, Engineering Tutorials"> 
+    <!-- Specifies keywords for easy location with search engines -->
+  	<meta name="keywords" content="Jaye, Olowojaye, Sir Rufus, Max, Engineering Tutorials, Olowojaye Rufus"> 
 
   	<!-- Links CSS style file to be used for the icons-->
   	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"> 
 
-  	<!-- Links CSS style file to be used for the page-->
-  	<link rel="stylesheet" href="style.css">
+  	<!-- Links CSS file to be used for the page-->
+  	<link rel="stylesheet" type="text/css" href="styles.css"/>
 
   	<!-- Specifies logo beside page title -->
-  	<link rel = "icon" href = "logo.svg" type = "image/x-icon"> 
-
-	<title>Olowojaye Rufus</title>
+  	<link rel = "icon" href = "logo.svg" type = "image/x-icon">
 </head>
 <body>
+    <header id="page-header" class="page-header">
+        <div id="top-bar">
+            <div class="nav-button left-button" id="left-button" onclick="openNav()">
+                <i class="las la-bars"></i>
+            </div>
+            <div class="nav-button" id="logo">
+                <img src="logo.svg" alt="Jaye" id="logo-img" width="17.5%">
+            </div>
+        </div>
+    </header>
+    <nav class="nav" id="navbar">
+        <div class="nav" id="top-nav">
+            <div id="close-button">
+                <a href="javascript:void(0)" onclick="closeNav()"><i class="las la-times"></i></a>
+            </div>
+            <ul id="top-list">
+                <li class="nav-li"><a href="#home" class="nav-link home active" onclick="closeNav()">Home</a></li>
+                <li class="nav-li"><a href="#about" class="nav-link about" onclick="closeNav()">About</a></li>
+                <li class="nav-li"><a href="#projects" class="nav-link projects" onclick="closeNav()">Projects</a></li>
+                <li class="nav-li"><a href="#experience" class="nav-link experience" onclick="closeNav()">Experience</a></li>
+                <li class="nav-li"><a href="#contact" class="nav-link contact" onclick="closeNav()">Contact</a></li>
+            </ul>
+        </div>
+        <aside id="aside-head">
+            <div class="nav" id="left-nav">
+                <ul id="left-list">
+                    <li class="code-li"><a href="https://github.com/olowojaye" class="code-link" title="GitHub" target="_blank"><i class="lab la-github"></i></a></li>
+                    <li class="code-li"><a href="https://www.freecodecamp.org/Olowojaye" class="code-link" title="freeCodeCamp" target="_blank"><i class="lab la-free-code-camp"></i></a></li>
+                    <li class="code-li"><a href="https://www.datacamp.com/profile/rufusolowojaye" class="code-link" title="DataCamp" target="_blank"><i class="las la-laptop-code"></i></a></li>
+                    <li class="code-li"><a href="https://www.hackerrank.com/rufusolowojaye?hr_r=1" class="code-link" title="HackerRank" target="_blank"><i class="lab la-hackerrank"></i></a></li>
+                    <li class="code-li"><a href="https://www.kaggle.com/sirrufusmax" class="code-link" title="Kaggle" target="_blank"><i class="lab la-kaggle"></i></a></li>
+                </ul>
+            </div>
+            <div class="nav" id="right-nav">
+                <ul id="right-list">
+                    <li class="social-li"><a href="https://www.linkedin.com/in/olowojaye-rufus-48213735/" class="social-link" title="LinkedIn" target="_blank"><i class="lab la-linkedin"></i></a></li>
+                    <li class="social-li"><a href="https://twitter.com/Sir_Rufus_Max" class="social-link" title="Twitter" target="_blank"><i class="lab la-twitter"></i></a></li>
+                    <li class="social-li"><a href="https://web.facebook.com/Jaryehorbah/" class="social-link" title="Facebook" target="_blank"><i class="lab la-facebook"></i></a></li>
+                    <li class="social-li"><a href="https://www.instagram.com/sir_rufus_max/" class="social-link" title="Instagram" target="_blank"><i class="lab la-instagram"></i></a></li>
+                    <li class="social-li"><a href="https://www.youtube.com/c/MaxAcademy1" class="social-link" title="YouTube" target="_blank"><i class="lab la-youtube"></i></a></li>
+                </ul>
+            </div>
+        </aside>
+    </nav>
 
-	<!-- For logo and navigation bar -->
-	
-	<nav id="navigation">
-		<img id="logo" src="logo.svg" alt="Jaye">
-		<div class="nav-right">
-			<input type="checkbox" id="check">
-			<label for="check" class="checkbtn before">=</label>
-			<label for="check" class="checkbtn after">X</label>
-			<ul id="nav-list">
-				<li class="nav-li">
-					<a class="nav-link home active" href="#home"><i class="las la-home"></i><span class="nav-name">Home</span></a>
-				</li>
-				<li class="nav-li">
-					<a class="nav-link about" href="#about"><i class="las la-user"></i><span class="nav-name">About</span></a>
-				</li>
-				<li class="nav-li">
-					<a class="nav-link projects" href="#projects"><i class="las la-project-diagram"></i><span class="nav-name">Projects</span></a>
-				</li>
-				<li class="nav-li">
-					<a class="nav-link experience" href="#experience"><i class="las la-briefcase"></i><span class="nav-name">Experience</span></a>
-				</li>
-				<li class="nav-li">
-					<a class="nav-link contact" href="#contact"><i class="las la-envelope"></i><span class="nav-name">Contact</span></a>
-				</li>
-			</ul>
-		</div>
-	</nav>
+    <!-- For side bars on big screens -->
+    <aside id="aside-foot">
+        <div class="nav" id="left-nav">
+            <ul id="left-list">
+                <li class="code-li"><a href="https://github.com/olowojaye" class="code-link" title="GitHub" target="_blank"><i class="lab la-github"></i></a></li>
+                <li class="code-li"><a href="https://www.freecodecamp.org/Olowojaye" class="code-link" title="freeCodeCamp" target="_blank"><i class="lab la-free-code-camp"></i></a></li>
+                <li class="code-li"><a href="https://www.datacamp.com/profile/rufusolowojaye" class="code-link" title="DataCamp" target="_blank"><i class="las la-laptop-code"></i></a></li>
+                <li class="code-li"><a href="https://www.hackerrank.com/rufusolowojaye?hr_r=1" class="code-link" title="HackerRank" target="_blank"><i class="lab la-hackerrank"></i></a></li>
+                <li class="code-li"><a href="https://www.kaggle.com/sirrufusmax" class="code-link" title="Kaggle" target="_blank"><i class="lab la-kaggle"></i></a></li>
+            </ul>
+        </div>
+        <div class="nav" id="right-nav">
+            <ul id="right-list">
+                <li class="social-li"><a href="https://www.linkedin.com/in/olowojaye-rufus-48213735/" class="social-link" title="LinkedIn" target="_blank"><i class="lab la-linkedin"></i></a></li>
+                <li class="social-li"><a href="https://twitter.com/Sir_Rufus_Max" class="social-link" title="Twitter" target="_blank"><i class="lab la-twitter"></i></a></li>
+                <li class="social-li"><a href="https://web.facebook.com/Jaryehorbah/" class="social-link" title="Facebook" target="_blank"><i class="lab la-facebook"></i></a></li>
+                <li class="social-li"><a href="https://www.instagram.com/sir_rufus_max/" class="social-link" title="Instagram" target="_blank"><i class="lab la-instagram"></i></a></li>
+                <li class="social-li"><a href="https://www.youtube.com/c/MaxAcademy1" class="social-link" title="YouTube" target="_blank"><i class="lab la-youtube"></i></a></li>
+            </ul>
+        </div>
+    </aside>
+    <main id="main-content">
+        <section class="page-section" id="home">
+            <header class="section-header">
 
-
-	<!-- For side bar menu -->
-	<div id="social-icons">
-		<a title="GitHub" href="https://github.com/olowojaye" target="_blank" class="social-link"><i class="lab la-github social"></i></a>
-		<a title="DataCamp" href="https://https://www.datacamp.com/profile/rufusolowojaye" target="_blank" class="social-link"><i class="las la-laptop-code social"></i></a>
-		<a title="LinkedIn" href="https://www.linkedin.com/in/olowojaye-rufus-48213735/" target="_blank" class="social-link"><i class="lab la-linkedin social"></i></a>
-		<a title="Kaggle" href="https://www.kaggle.com/sirrufusmax" target="_blank" class="social-link"><i class="lab la-kaggle  social"></i></a>
-		<a title="YouTube" href="https://www.youtube.com/c/MaxAcademy1" target="_blank" class="social-link"><i class="lab la-youtube social"></i></a>
-		<a title="HackerRank" href="https://www.hackerrank.com/rufusolowojaye?hr_r=1" target="_blank" class="social-link"><i class="lab la-hackerrank  social"></i></a>
-		<a title="Twiter" href="https://twitter.com/Sir_Rufus_Max" target="_blank" class="social-link"><i class="lab la-twitter social"></i></a>
-	</div>
-
-	<!-- For Home page -->
-	<section id="home" class="page">
-		<div class="page-container">
-			<div id="home-text">
-				<div id="greeting">Hi, I am</div>
-				<div id="name">Olowojaye Rufus</div>
-				<div id="roles">(Front-end Developer and Data Scientist)</div>
-				<div id="intro">I develop algorithms and softwares that help individuals and businesses make data-driven decisions.</div>
-			</div>
-			<img src="image.png" id="dp">			
-		</div>
-	</section>
-
-	<!-- For About page -->
-	<section id="about" class="page">
-		<div class="page-container">
-			<h1 class="page-header">About Me</h1>
-			<p class="content">I am an academic, data scientist and web developer with interests in web applications, artificial intelligence, and robotics.</p>
-		    <p class="content">I am proficient in the following packages, and always look forward to learning new and exciting ones.</p>
-		    <div id="skills">
-				<div class="sub-section">
-					<h2 class="sub-heading">Web Development</h2>
-					<p class="content">Front End: HTML5, CSS3, JavaScript, React <br>Back End (In view): NodeJS, Express.js <br> Others (In view): Flask, Django</p>
-				</div>
-				<div class="sub-section">
-					<h2 class="sub-heading">Data Science</h2>
-					<p class="content">Python: Scikit-learn, XGBoost <br> SQL: MySQL, PostgreSQL, MS SQL Server <br>In view: PyTorch, TensorFlow</p>
-				</div>
-			</div>
-			<div id="cv"><a class="cv" href="Resume_Olowojaye_Rufus.pdf" target="_blank">View my resume</a>
-			</div>
-		</div>
-	</section>
-
-	<!-- For Projects page -->
-	<section id="projects" class="page">
-		<div class="page-container">
-			<h1 class="page-header">My Projects</h1>
-			<p class="content">This website is my first web development project. It involves the use of CSS, HTML, JavaScript, and Canva for logo design and picture editing. Subsequent projects will be posted when completed.<br>
-    		My data science projects can be accessed on the GitHub and DataCamp links to the left. <br></p>			
-			<div class="sub-section">
-				<p class="content"></p>
-			</div>
-			<div class="sub-section">
-				<p class="content"></p>
-			</div>
-		</div>
-	</section>
-
-	<!-- For Experience page -->
-	<section id="experience" class="page">
-		<div class="page-container">
-			<h1 class="page-header">My Work Experience</h1>
-			<p class="content">To be updated.</p>
-			<div class="sub-section">
-				<p class="content"></p>
-			</div>
-			<div class="sub-section">
-				<p class="content"></p>
-			</div>
-		</div>
-	</section>
-
-	<!-- For Contact page -->
-	<section id="contact" class="page">
-		<div class="page-container">
-			<h1 class="page-header">Contact Me</h1>
-			<p class="content">Thank you for visiting my website. I could work with you on your next project. Kindly leave a message for me right away.</p>
-			<div>
-			<div id="form-container">
-		        <form id="form" action="https://formsubmit.co/e3b4c98e132ca4dda20c9377e5d0b241" method="POST" enctype="multipart/form-data">
-		        	<input style="font-size:16px;" type="text" name="name" id="name" class="form name" placeholder="Full Name" required>
-		            <input type="email" name="email" id="email" class="form email" placeholder="Email" required>
-		            <textarea name="message" id="message" class="form message" placeholder="Message" required></textarea>
-		            <label class="content" for="file">Attach file (optional): </label>
-	            	<input type="file" id="file" name="file" class="form upload">
-	            	<input type="submit" value="Send" class="form submit">
-		        </form>
-		    </div>
-		    </div>
-			
-		</div>
-	</section>
-
-	<!-- Link JS for active navigation -->
-	<script type="text/javascript" src="script.js"></script>
+            </header>
+            <main class="section-content" id="home-main">
+                <div id="home-text">
+                    <div id="greeting">Hi, I am</div>
+                    <div id="home-name">Olowojaye Rufus</div>
+                    <div id="roles">(Front-end Developer and Data Scientist)</div>
+                    <div id="intro">I develop algorithms and softwares that help individuals and businesses make data-driven decisions.</div>
+                </div>
+                <img src="image.png" id="dp">			
+            </main>
+        </section>
+        <section class="page-section" id="about">
+            <header class="section-header">
+                <h2>About Me</h2>
+            </header>
+            <main class="section-content">
+                <p class="content">I am an academic, data scientist and web developer with interests in web applications, artificial intelligence, and robotics.</p>
+                <p class="content">I am proficient in the following packages, and always look forward to learning new and exciting ones.</p>
+                <div id="skills">
+                    <div class="sub-section">
+                        <h3 class="sub-heading">Web Development</h3>
+                        <p class="content">Front End: HTML5, CSS3/SASS, JavaScript, Bootstrap, jQuery, React, Redux <br>Back End (In view): NodeJS <br> Others (In view): Flask, Django</p>
+                    </div>
+                    <div class="sub-section">
+                        <h3 class="sub-heading">Data Science</h3>
+                        <p class="content">Python: Scikit-learn, XGBoost, TensorFlow, NLTK <br> SQL: MySQL, PostgreSQL, MS SQL Server</p>
+                    </div>
+                </div>
+                <div style="clear: both;"></div>
+                <div id="resume">
+                    <a href="Olowojaye_Frontend_Engineer.pdf" class="resume">View my CV</a>
+                </div>
+            </main>
+        </section>
+        <section class="page-section" id="projects">
+            <header class="section-header">
+                <h2>My Projects</h2>
+            </header>
+            <main class="section-content">
+                <p class="content">This website is my first web development project. It involves the use of HTML, CSS/SASS, JavaScript, and Canva. Subsequent projects will be posted when completed.<br>
+                    My data science projects can be accessed on the GitHub and DataCamp links to the left. <br></p>			
+                <div class="sub-section">
+                    <p class="content"></p>
+                </div>
+                <div class="sub-section">
+                    <p class="content"></p>
+                </div>
+            </main>
+        </section>
+        <section class="page-section" id="experience">
+            <header class="section-header">
+                <h2>My Work Experience</h2>
+            </header>
+            <main class="section-content">
+                <p class="content">To be updated.</p>
+                <div class="sub-section">
+                    <p class="content"></p>
+                </div>
+                <div class="sub-section">
+                    <p class="content"></p>
+                </div>
+            </main>
+        </section>
+        <section class="page-section" id="contact">
+            <header class="section-header">
+                <h2>Contact Me</h2>
+            </header>
+            <main class="section-content">
+                <p class="content">Thank you for visiting my website. I could work with you on your next project. You may send me a message right away.</p>
+                <div id="form-container">
+                    <form id="form" action="https://formsubmit.co/e3b4c98e132ca4dda20c9377e5d0b241" method="POST" enctype="multipart/form-data"></label>
+                        <label class="form content">Name: <input type="text" name="name" id="name" class="form-field" placeholder="e. g., FirstName LastName" required></label>
+                        <label class="form content">Email: <input type="email" name="email" id="email" class="form-field"  placeholder="e. g., example@email.com" required></label>
+                        <label class="form content message">Your Message: <textarea name="message" id="message" class="form-field" placeholder="Hi, ..." required rows="4"></textarea></label>
+                        <label class="form content">Attach file (optional): <input type="file" id="file" class="form-field" name="file" ></label>
+                        <label class="form-content"><input type="submit" value="Send" class="form submit"></label>
+                    </form>
+                </div>
+            </main>
+        </section>
+    </main>
+    <footer id="page-footer">
+        <div id="foot-text">
+            <p>Developed by <a href="https://olowojaye.github.io">Olowojaye Rufus.</a></p>
+            <p>&copy; 2022</p>
+            <p>Theme inspired by <a href="https://brittanychiang.com/" target="_blank">Brittany Chiang.</a></p>
+        </div>
+    </footer>
 </body>
+<script src="script.js"></script>
 </html>
