@@ -1,5 +1,144 @@
-@tailwind components;
-@tailwind utilities;
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.w-fit {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.space-y-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
+}
+
+.space-y-4 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
+.bg-blue-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
 
 html {
   scroll-behavior: smooth;
@@ -35,6 +174,7 @@ body {
 #left-button {
   background-color: #020c1b;
 }
+
 #left-button i {
   border: 0.5px solid #64ffda;
   color: white;
@@ -81,6 +221,7 @@ ul {
   margin-bottom: 5vh;
   border-top: 1px solid gray;
 }
+
 #top-list li {
   height: 10vh;
   padding-left: 3vw;
@@ -99,6 +240,7 @@ ul {
   padding-bottom: 5vh;
   padding-top: 1vh;
 }
+
 #close-button i {
   border: 0.5px solid #64ffda;
   color: white;
@@ -112,6 +254,7 @@ ul {
   grid-template-columns: repeat(5, 1fr);
   place-items: center;
 }
+
 #left-list a i:hover,
 #right-list a i:hover {
   transform: scale(2.5);
@@ -245,6 +388,7 @@ h2 {
   text-align: center;
   margin-top: 20px;
 }
+
 #resume a {
   background-color: #f57dff;
   color: #020c1b;
@@ -300,12 +444,6 @@ input[type="submit"] {
 }
 
 ::-moz-placeholder {
-  color: #495670;
-  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
-    system-ui, sans-serif;
-}
-
-:-ms-input-placeholder {
   color: #495670;
   font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
     system-ui, sans-serif;
@@ -406,27 +544,34 @@ div.project-div {
   #left-button {
     display: none;
   }
+
   #aside-head {
     display: none;
   }
+
   #aside-foot {
     display: block;
   }
+
   .page-header {
     display: inline-block;
     z-index: 1;
   }
+
   #top-bar {
     display: inline-block;
   }
+
   #logo {
     width: 7.5vw;
     margin-top: 2vh;
     margin-left: 1.5vw;
   }
+
   #logo #logo-img {
     width: 100%;
   }
+
   #top-list {
     display: inline-grid;
     grid-template-columns: repeat(4, 13vw);
@@ -436,10 +581,12 @@ div.project-div {
     margin-right: 5vw;
     border: none;
   }
+
   #top-list li {
     border: none;
     font-size: 16px;
   }
+
   #navbar {
     display: inline-block;
     padding-top: 2vh;
@@ -454,6 +601,7 @@ div.project-div {
     padding-left: 15vw;
     transition: none;
   }
+
   #left-list,
   #right-list {
     display: flex;
@@ -462,38 +610,66 @@ div.project-div {
     height: 100vh;
     position: fixed;
   }
+
   #left-list a i,
   #right-list a i {
     margin-top: 5vh;
   }
+
   #left-list {
     left: 0;
     margin-left: 2vw;
   }
+
   #right-list {
     right: 0;
     margin-right: 2vw;
   }
+
   #main-content {
     left: 10vw;
     margin: 0;
     width: 80vw;
   }
+
   #home-main {
     display: block;
   }
+
   #home-text {
     width: 60%;
     position: relative;
     top: 5vh;
   }
+
   #dp {
     width: 35%;
     position: relative;
     top: 10vh;
     transform: scale(1.4);
   }
+
   .sub-section {
     width: 40vw;
   }
-} /*# sourceMappingURL=styles.css.map */
+}
+
+@media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:w-full {
+    width: 100%;
+  }
+
+  .md\:justify-around {
+    justify-content: space-around;
+  }
+
+  .md\:self-end {
+    align-self: flex-end;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */
