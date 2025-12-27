@@ -144,8 +144,13 @@ html {
   scroll-behavior: smooth;
 }
 
+<<<<<<< HEAD
 *,
 *::before,
+=======
+*,
+*::before,
+>>>>>>> 572418fe93824f5e1a95f4aa0e614794abd4f4d7
 *::after {
   padding: 0;
   margin: 0;
@@ -247,7 +252,11 @@ ul {
   transform: scale(1.8);
 }
 
+<<<<<<< HEAD
 #left-list,
+=======
+#left-list,
+>>>>>>> 572418fe93824f5e1a95f4aa0e614794abd4f4d7
 #right-list {
   display: grid;
   margin-top: 5vh;
@@ -255,7 +264,11 @@ ul {
   place-items: center;
 }
 
+<<<<<<< HEAD
 #left-list a i:hover,
+=======
+#left-list a i:hover,
+>>>>>>> 572418fe93824f5e1a95f4aa0e614794abd4f4d7
 #right-list a i:hover {
   transform: scale(2.5);
   color: #64ffda;
@@ -321,7 +334,11 @@ section.page-section:not(first-child) {
 
 #home-name {
   color: white;
+<<<<<<< HEAD
   font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+=======
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+>>>>>>> 572418fe93824f5e1a95f4aa0e614794abd4f4d7
     system-ui, sans-serif;
   font-size: clamp(40px, 8vw, 80px);
   font-weight: 600;
@@ -331,14 +348,22 @@ section.page-section:not(first-child) {
 
 #intro {
   color: #8892b0;
+<<<<<<< HEAD
   font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+=======
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+>>>>>>> 572418fe93824f5e1a95f4aa0e614794abd4f4d7
     system-ui, sans-serif;
   font-size: 20px;
   line-height: 1.3;
   text-align: left;
 }
 
+<<<<<<< HEAD
 #home-text,
+=======
+#home-text,
+>>>>>>> 572418fe93824f5e1a95f4aa0e614794abd4f4d7
 #dp {
   display: inline-block;
 }
@@ -361,7 +386,11 @@ section.page-section:not(first-child) {
 
 .sub-heading {
   color: #ccd6f6;
+<<<<<<< HEAD
   font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+=======
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+>>>>>>> 572418fe93824f5e1a95f4aa0e614794abd4f4d7
     system-ui, sans-serif;
   font-size: clamp(15px, 3vw, 30px);
   line-height: 1.1;
@@ -371,7 +400,11 @@ section.page-section:not(first-child) {
 
 .content {
   color: #8892b0;
+<<<<<<< HEAD
   font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+=======
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+>>>>>>> 572418fe93824f5e1a95f4aa0e614794abd4f4d7
     system-ui, sans-serif;
   font-size: 20px;
   line-height: 1.3;
@@ -404,8 +437,13 @@ form {
   justify-content: space-between;
 }
 
+<<<<<<< HEAD
 #name,
 #email,
+=======
+#name,
+#email,
+>>>>>>> 572418fe93824f5e1a95f4aa0e614794abd4f4d7
 #message {
   background-color: transparent;
   border: none;
@@ -415,8 +453,13 @@ form {
   color: #64ffda;
 }
 
+<<<<<<< HEAD
 input:focus,
 textarea:focus,
+=======
+input:focus,
+textarea:focus,
+>>>>>>> 572418fe93824f5e1a95f4aa0e614794abd4f4d7
 select:focus {
   outline: none;
 }
@@ -445,13 +488,21 @@ input[type="submit"] {
 
 ::-moz-placeholder {
   color: #495670;
+<<<<<<< HEAD
   font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+=======
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+>>>>>>> 572418fe93824f5e1a95f4aa0e614794abd4f4d7
     system-ui, sans-serif;
 }
 
 ::placeholder {
   color: #495670;
+<<<<<<< HEAD
   font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+=======
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+>>>>>>> 572418fe93824f5e1a95f4aa0e614794abd4f4d7
     system-ui, sans-serif;
 }
 
@@ -475,7 +526,11 @@ div.project-div {
   align-items: center;
   margin: 0;
   color: #8892b0;
+<<<<<<< HEAD
   font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+=======
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system,
+>>>>>>> 572418fe93824f5e1a95f4aa0e614794abd4f4d7
     system-ui, sans-serif;
 }
 
@@ -540,7 +595,11 @@ div.project-div {
 }
 
 @media screen and (min-width: 768px) {
+<<<<<<< HEAD
   #close-button,
+=======
+  #close-button,
+>>>>>>> 572418fe93824f5e1a95f4aa0e614794abd4f4d7
   #left-button {
     display: none;
   }
@@ -602,7 +661,11 @@ div.project-div {
     transition: none;
   }
 
+<<<<<<< HEAD
   #left-list,
+=======
+  #left-list,
+>>>>>>> 572418fe93824f5e1a95f4aa0e614794abd4f4d7
   #right-list {
     display: flex;
     flex-direction: column;
@@ -611,7 +674,11 @@ div.project-div {
     position: fixed;
   }
 
+<<<<<<< HEAD
   #left-list a i,
+=======
+  #left-list a i,
+>>>>>>> 572418fe93824f5e1a95f4aa0e614794abd4f4d7
   #right-list a i {
     margin-top: 5vh;
   }
@@ -670,6 +737,11 @@ div.project-div {
   .md\:self-end {
     align-self: flex-end;
   }
+<<<<<<< HEAD
 }
 
+=======
+}
+
+>>>>>>> 572418fe93824f5e1a95f4aa0e614794abd4f4d7
 /*# sourceMappingURL=output.css.map */
